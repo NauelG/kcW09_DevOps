@@ -1,0 +1,41 @@
+<% include head.html {title: title} %>
+
+<body>
+<% include header.html {title: title} %>
+
+    <div class="container">
+        <nav class="breadcrumb">
+            <h3><%= __('Products on Sale') %></h3>
+        </nav>
+        <div class="card-columns">
+            <% anunciosResult.forEach(function(anuncio){%>
+                <% if(anuncio.venta) { %>
+                    <div class="card bg-light border-secondary">
+                        <% include anuncio.html  {anuncio:anuncio} %>
+                    </div>
+                <% }; %>
+            <%})%>
+        </div>
+
+        <nav class="breadcrumb">
+            <h3><%= __('Searched products') %></h3>
+        </nav>
+        <div class="card-columns">
+            <% anunciosResult.forEach(function(anuncio){%>
+                <% if(!anuncio.venta) { %>
+                    <div class="card bg-light border-secondary">
+                        <% include anuncio.html {anuncio:anuncio} %>
+                    </div>
+                <% }; %>
+            <%})%>
+        </div>
+    </div>
+
+
+
+
+    <% include footer.html %>
+
+</body>
+
+</html>

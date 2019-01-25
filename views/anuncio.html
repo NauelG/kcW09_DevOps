@@ -1,0 +1,10 @@
+<img src="images/anuncios/<%- anuncio.foto %>" class="card-img-top">
+<div class="card-body">
+    <h5 class="card-title"><%= anuncio.nombre %></h5>
+    <button type="button" class="btn btn-success btn-block"><%= anuncio.precio %>€</button>
+</div>
+<div class="card-footer">
+    <% anuncio.tags.forEach(function(tag){%>
+        <span class="badge badge-light"><%= tag %></span>
+    <%});%>
+</div>

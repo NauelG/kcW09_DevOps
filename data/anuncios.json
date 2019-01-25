@@ -1,0 +1,45 @@
+{
+    "anuncios": [{
+            "nombre": "Bicicleta",
+            "venta": true,
+            "precio": 230.15,
+            "foto": "bici.jpg",
+            "tags": ["lifestyle", "motor"]
+        },
+        {
+            "nombre": "iPhone 3GS",
+            "venta": false,
+            "precio": 50.00,
+            "foto": "iphone.jpg",
+            "tags": ["lifestyle", "mobile"]
+        },
+        {
+            "nombre": "iMac",
+            "venta": true,
+            "precio": 1050.00,
+            "foto": "imac.jpg",
+            "tags": ["lifestyle", "work"]
+        },
+        {
+            "nombre": "Macbook Pro",
+            "venta": true,
+            "precio": 950.00,
+            "foto": "macbook.jpg",
+            "tags": ["lifestyle", "work"]
+        },
+        {
+            "nombre": "Audi A3",
+            "venta": false,
+            "precio": 11450.00,
+            "foto": "audia3.jpg",
+            "tags": ["lifestyle", "motor"]
+        },
+        {
+            "nombre": "Rolex",
+            "venta": false,
+            "precio": 1300.00,
+            "foto": "rolex.jpg",
+            "tags": ["lifestyle"]
+        }
+    ]
+}

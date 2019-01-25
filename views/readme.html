@@ -1,0 +1,45 @@
+<h1 id="nodepop-api-rest">NodePOP - api REST</h1>
+<p align="center">
+
+  <img alt="nodeJS" src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg">
+</p>
+
+<p>Práctica del módulo de Backend Avanzado con NodeJS, Express y MongoDB de <strong>KeepCoding</strong>.</p>
+<h2 id="sobre-la-api">Sobre la API</h2>
+<p>Esta API ha sido creada para el Bootcamp Web de KeepCoding. Consiste en un backend construido con Express, NodeJS y MongoDB.</p>
+<p>Todas las consultas a los anuncios almacenados se pueden hacer mediante dos vias:</p>
+<ul>
+<li>Consultas directas por url, que devolveran una visa con los anuncios filtrados.</li>
+<li>Consultas a la api como servicio, que devolverá un fichero JSON.</li>
+</ul>
+<h3 id="par-metros-de-consulta">Parámetros de consulta</h3>
+<p>Ambas vías de consulta admiten los mismos parámetros. Un ejemplo de consulta seria:</p>
+<pre><code>://nombrededominio/api/anuncios?name=reloj&amp;tags=lifestyle&amp;type=venta&amp;range=10-100&amp;limit=3&amp;skip=3&amp;sort=nombre</code></pre><p>Los parámetros aceptados son:</p>
+<ul>
+<li><strong>Name</strong>: El nombre de un artículo. No distingue minúsculas de mayúsculas.</li>
+<li><strong>Tags</strong>: El nombre de un tag o categoría.</li>
+<li><strong>Type</strong>: Venta o Compra según el tipo de anuncio.</li>
+<li><strong>Range</strong>: Precio mínimo y máximo separado por un guión.</li>
+<li><strong>Limit</strong>: Número máximo de anuncios a devolver.</li>
+<li><strong>Skip</strong>: Número de anuncios a saltar. En caso de paginación.</li>
+<li><strong>Sort</strong>: Campo por el cuál queremos ordenar (nombre, precio). En negativo si querémos un orden descendente.</li>
+</ul>
+<h3 id="new-release-11-2018">New Release 11/2018</h3>
+<p>La api ha sido actualizada incluyendo diferentes mejroas. La versión anterior sigue disponible durante un tiempo, aunque se recomienda migrar a la versión nueva.</p>
+<pre><code>GET://nombrededominio/apiv2/anuncios?token=TOKEN&amp;name=reloj&amp;tags=lifestyle&amp;type=venta&amp;range=10-100&amp;limit=3&amp;skip=3&amp;sort=nombre</code></pre><p>Las mejoras incluidas son:</p>
+<h4 id="seguridad-de-la-api">Seguridad de la API</h4>
+<p>Se ha securizado toda la API requiriendo un token de usuario para todas sus consultas. El token se puede obtener haciendo login a:</p>
+<pre><code>POST://nombrededominio/apiv2//apiv2/authenticate</code></pre><p>Con un nombre de usuario y una contraseña valida en el body.</p>
+<h4 id="internacionalizaci-n-de-la-vista">Internacionalización de la vista</h4>
+<p>La vista de anuncios se ha internacionalizado con el módulo <code>i18n</code>. El index renderiza la documentación, la cual esta pendiente de traducir.</p>
+<h4 id="micro-servicio-de-minificaci-n-de-imagenes">Micro servicio de minificación de imagenes</h4>
+<p>La ruta de subida de anuncios a la api:</p>
+<pre><code>POST://nombrededominio/apiv2//apiv2/anuncios</code></pre><p>Permite enviar un fichero de imagen en el campo foto. Si la api recibe esta imagen la guarda en el directorio de imagenes, guarda la ruta en la DB i hace lo mismo con su correspondiente thumbnail a traves de un microservicio creado en cote.</p>
+<h2 id="sobre-su-desarrollo">Sobre su desarrollo</h2>
+<h3 id="instalaci-n">Instalación</h3>
+<p>Para inciar la aplicación instala sus dependencias:</p>
+<pre><code class="language-shell">$ npm install</code></pre>
+<p>Con el módulo <code>dotenv</code> de node, las variables de entorno se cargan dinámicamente. Copia el archivo <code>.env.example</code> en <code>.env</code> y revisa los valores.</p>
+<h2 id="base-de-datos">Base de datos</h2>
+<p>Para inicializar la base de datos con documentos de prueba ejecuta:</p>
+<pre><code class="language-shell">$ npm run install-db</code></pre>

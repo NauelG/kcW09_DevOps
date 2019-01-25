@@ -1,0 +1,14 @@
+.breadcrumb {
+    margin-top: 2rem;
+}
+
+.header-text {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+img.node {
+    display: block;
+    margin: 0 auto;
+    height: 7rem
+}
