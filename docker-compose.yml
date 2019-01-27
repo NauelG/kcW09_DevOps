@@ -1,0 +1,9 @@
+version: "0.1"
+services:
+  web:
+    build: .
+    restart: "always"
+    net: "bridge"
+    ports:
+      - "3000:3000"
+    env_file: .env
