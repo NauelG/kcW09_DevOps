@@ -8,7 +8,7 @@ Práctica del módulo de Backend Avanzado con NodeJS, Express y MongoDB de **Kee
 
 ## DevOps 01/2019
 
-La aplicación se ha desplegado en una instáncia de AWS EC2. Se puede acceder a ella mediante el siguiente [link](https://devops-app.nauelg.io/anuncios).
+La aplicación se ha desplegado en una instáncia de AWS EC2 con ip [54.197.195.3](http://54.197.195.3/). Se puede acceder a ella mediante el siguiente [link](https://devops-app.nauelg.io/anuncios).
 
 ### Arquitectura
 
