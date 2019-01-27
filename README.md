@@ -6,6 +6,19 @@
 
 Práctica del módulo de Backend Avanzado con NodeJS, Express y MongoDB de **KeepCoding**.
 
+## DevOps 01/2019
+
+La aplicación se ha desplegado en una instáncia de AWS EC2. Se puede acceder a ella mediante el siguiente [link](https://devops-app.nauelg.io/anuncios).
+
+### Arquitectura
+
+Se ha utlitzado la siguiente arquitectura:
+- Nginx como servidor web / proxy inverso.
+- PM2 como gestor de procesos de Node.
+- MongoDB como base de datos.
+- Plantilla de Startboostrap como `default_server`. La misma plantilla también se ha habilitado en un [dominio](https://devops-web.nauelg.io/).
+- Certificado Lets Encrypt para SSL.
+
 ## Sobre la API
 
 Esta API ha sido creada para el Bootcamp Web de KeepCoding. Consiste en un backend construido con Express, NodeJS y MongoDB.
